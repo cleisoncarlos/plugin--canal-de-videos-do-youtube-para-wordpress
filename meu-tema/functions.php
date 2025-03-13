@@ -1,9 +1,32 @@
 <?php
+
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+//-------------------------------------------
+
+
+
+function register_my_menus() {
+    register_nav_menus(
+        array(
+            'primary' => __('Primary Menu', 'your-theme-name'),
+        )
+    );
+}
+add_action('init', 'register_my_menus');
+
+
+//------------------------------------------
+
+
+
 function enqueue_bootstrap() {
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'enqueue_bootstrap');
+
+//----------------------------------------------------
 
 function enqueue_custom_script() {
     wp_enqueue_script('custom-js', get_stylesheet_directory_uri() . '/plugin-video.js', array(), null, true);
