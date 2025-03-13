@@ -1,0 +1,20 @@
+/*
+ Theme Name: Meu Tema
+ Theme URI: http://example.com
+ Author: Seu Nome
+ Author URI: http://example.com
+ Description: Um tema WordPress personalizado.
+ Version: 1.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain: meu-tema
+*/
+
+body {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #0073aa;
+}
